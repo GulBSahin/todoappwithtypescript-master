@@ -2,16 +2,11 @@ import React from 'react'
 import TodoListItem from './TodoListItem'
 
 
-interface ITodoList {
-  todos: TodoType[] ;
-}
-
-
-const TodoList:React.FC<ITodoList> = ({todos}) => {
+const TodoList:React.FC<ITodoList> = ({todos,toggleTodo,deleteTodo}) => {
   return (
     <ul>
       {
-      todos.map((item)=> <TodoListItem key={item.id} item={item}/> )
+      todos.map((item)=> <TodoListItem key={item.id} item={item} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/> )
       }
     </ul>
   )
