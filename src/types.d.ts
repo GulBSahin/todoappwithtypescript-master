@@ -2,5 +2,7 @@
 interface TodoType {
     id: string|number;
     isDone: boolean;
-    tasks: string;
+    task: string;
   };  
+
+  type AddFn = (text:string) =>void;

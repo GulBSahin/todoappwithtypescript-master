@@ -1,9 +1,13 @@
 import React from 'react';
-const TodoListItem = () => {
+
+interface IListItem {
+  item: TodoType;
+}
+const TodoListItem:React.FC<IListItem> = ({item}) => {
   return (
     <li>
-      <p className='checked'>Todo </p>
-      <p> Todo </p>
+      <p className='checked'>{item.task} </p>
+      <p> {item.task} </p>
       <span className="task-icons" >✖️</span>
     </li>
   );
